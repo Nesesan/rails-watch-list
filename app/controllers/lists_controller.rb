@@ -1,5 +1,4 @@
 class ListsController < ApplicationController
-
   before_action :set_list, only: [:show, :destroy]
 
   def index
@@ -8,7 +7,7 @@ class ListsController < ApplicationController
 
   def show
     @bookmark = Bookmark.new
-    @review = Review.new(list: @list)
+
   end
 
   def new
@@ -36,6 +35,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name, :photo)
+    params.require(:list).permit(:name)
   end
-  end
+end
