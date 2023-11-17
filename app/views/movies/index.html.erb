@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+
+<% @movies.each do |movie| %>
+    <li><%= movie.title %></li>
+    <li><%= movie.poster_url %></li>
+    <li><%= movie.overview %></li>
+    <li><%= movie.rating %></li>
+<% end %>
